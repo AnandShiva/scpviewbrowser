@@ -1,0 +1,11 @@
+---
+applications: 
+ - name: ViewBrowserSCP
+   memory: 1024M
+   instances: 1 
+   path: ./client
+   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+   services:
+    - xsuaa-demo
+    - connectivity-demo-lite
+    - destination-demo-lite

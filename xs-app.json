@@ -1,0 +1,22 @@
+{
+	"welcomeFile":"/client/ssb/scp/viewbrowser/index.html",
+	"routes": [
+		{
+			"source": "^/backend(.*)$",
+			"target": "$1",
+			"destination": "ER9CLNT",
+			"authenticationType":"none"
+		},
+		{
+			"source": "^/ssb/scp/viewbrowser(.*)$",          
+			"localDir":"client/",
+			"cacheControl":"public, max-age=31536000,must-revalidate",
+			"target":"$1",
+			"authenticationType":"xsuaa"
+		}
+	]
+}
+
+
+
+

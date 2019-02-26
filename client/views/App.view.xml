@@ -1,0 +1,21 @@
+<mvc:View
+   xmlns="sap.m"
+   controllerName="ssb.scp.viewbrowser.controllers.App"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Page
+		title="Sample UI5 application"
+		class="sapUiContentPadding"
+		showNavButton="true" >
+		<headerContent>
+			<Button icon="sap-icon://action" tooltip="Share" />
+		</headerContent>
+		<subHeader>
+			<Toolbar>
+				<SearchField />
+			</Toolbar>
+		</subHeader>
+		<content>
+			
+		</content>
+	</Page>
+</mvc:View>
