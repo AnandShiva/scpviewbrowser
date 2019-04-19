@@ -1,6 +1,6 @@
-sap.ui.define(["sap/ui/core/UIComponent"], function(UIComponent){
+sap.ui.define(["sap/ui/core/UIComponent","ssb/scp/viewbrowser/utils/Formatter"], function(UIComponent,Formatter){
     "use strict";
-    return UIComponent.extend("ssb.scp.viewbrowser",{
+    return UIComponent.extend("ssb.scp.viewbrowser.Component",{
         metadata : {
            manifest : "json"
          },

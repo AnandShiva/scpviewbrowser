@@ -1,7 +1,7 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"], function(Controller){
+sap.ui.define(["sap/ui/core/mvc/Controller","ssb/scp/viewbrowser/utils/Formatter"], function(Controller,Formatter){
     "use strict";
-    return Controller.extend("ssb.scp.viewbrowser", {
-        init : function(){
+    return Controller.extend("ssb.scp.viewbrowser.controllers.App", {
+        onInit : function(){
             debugger;
         }
     })

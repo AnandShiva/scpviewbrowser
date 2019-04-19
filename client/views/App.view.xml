@@ -1,19 +1,13 @@
-<View xmlns="sap.m" controllerName="ssb.scp.viewbrowser.controllers.App" xmlns:mvc="sap.ui.core.mvc">
+<View xmlns="sap.m" controllerName="ssb.scp.viewbrowser.controllers.App" xmlns:mvc="sap.ui.core.mvc" height="100%">
 	<Page title="View Browser - SCP " class="sapUiContentPadding" showNavButton="true">
-		<headerContent>
-			<Button icon="sap-icon://action" tooltip="Share" />
-		</headerContent>
 		<content>
 			<Table items="{
 			path: '/CDSVIEWS',
 			sorter: {
 				path: 'Ddlsourcename'
 			}
-		}" growing="true" mode="MultiSelect" fixedLayout="false" noDataText=" " selectionChange="_toggleFotterButtons" rememberSelections="true">
+		}" growing="true" mode="MultiSelect" fixedLayout="false" noDataText=" " rememberSelections="true">
 				<columns>
-					<Column minScreenWidth="Tablet" demandPopin="true" width="5em" popinDisplay="Inline">
-						<Text text="{i18n>XTIT_COL_FAVORITE}" />
-					</Column>
 					<Column minScreenWidth="Tablet" demandPopin="true" width="5em" popinDisplay="Inline">
 						<Text text="{i18n>XTIT_COL_TAGS}" />
 					</Column>
@@ -41,15 +35,11 @@
 					<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" visible="false">
 						<Text text="{i18n>XTIT_COL_ORIGIN}" />
 					</Column>
-					<Column minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" visible="false" hAlign="Center">
-						<Text text="{i18n>XTIT_DRAFT_STATUS}" />
-					</Column>
 				</columns>
 				<items>
 					<ColumnListItem vAlign="Middle" type="Navigation" press="_handleViewNavigation">
 						<cells>
-							<Icon id="VB_FAVICON" src="sap-icon://favorite" visible="{path:'Ddlsourceisfavorite',formatter:'ssb.scp.viewbrowser.utils.Formatter.decideFavorite'}" />
-							<Button tooltip="{i18n>XBUT_MANAGE_TAGS}" icon="sap-icon://tag" type="Transparent" text="{path:'Numberofaddedtags',formatter:'ssb.scp.viewbrowser.utils.Formatter.decideTagCount'}" />
+							<Button tooltip="{i18n>XBUT_MANAGE_TAGS}" type="Transparent" text="{path:'Numberofaddedtags',formatter:'ssb.scp.viewbrowser.utils.Formatter.decideTagCount'}" />
 							<Text text="{Ddlsourcenametext}" class="vbTextWrap" />
 							<Text text="{Ddlsourcetext}" />
 							<Text text="{path : 'CdsViewStatus',formatter:'ssb.scp.viewbrowser.utils.Formatter.decideViewStatus'}" />
@@ -58,7 +48,6 @@
 							<Text text="{path:'Cdsviewtype',formatter:'ssb.scp.viewbrowser.utils.Formatter.formatViewType'}" />
 							<Text text="{Cdsviewpackage}" />
 							<Text text="{Cdsorigin}" />
-							<Icon src="sap-icon://sys-enter" visible="{path : 'IsDraft', formatter:'ssb.scp.viewbrowser.utils.Formatter.decideDraftIconVisibility'}" tooltip="{path : 'IsDraft', formatter:'ssb.scp.viewbrowser.utils.Formatter.decideDraftToolTip'}" />
 						</cells>
 					</ColumnListItem>
 				</items>
