@@ -2,7 +2,11 @@ sap.ui.define(["sap/ui/core/mvc/Controller","ssb/scp/viewbrowser/utils/Formatter
     "use strict";
     return Controller.extend("ssb.scp.viewbrowser.controllers.App", {
         onInit : function(){
-            debugger;
+           this.initializeDataModel();
+        },
+        initializeDataModel : function(){
+            var oDataModel = new sap.ui.model.json.JSONModel({});
+            this.getView().setModel("dataModel",oDataModel);
         }
     })
 });

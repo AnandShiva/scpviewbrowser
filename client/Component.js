@@ -7,6 +7,16 @@ sap.ui.define(["sap/ui/core/UIComponent","ssb/scp/viewbrowser/utils/Formatter"],
         init : function(){
         // call the init function of the parent
          UIComponent.prototype.init.apply(this, arguments);
+        },
+        fetchDestinations : function(){
+            jQuery.ajax("/redirect",{
+                success : function(){
+
+                },
+                error : function(){
+
+                }
+            });
         }
     })
 });
